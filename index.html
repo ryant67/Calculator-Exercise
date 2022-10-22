@@ -4,12 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="calc.css">
     <title>Calculator</title>
 </head>
 <body>
 
 <div class="container">
-    <div id="main"></div>
+    <div id="numSpot"></div>
+    <div id="calcSymbol"></div>
     <button class = "button" id="oneButton" value = "1"> 1 </button>
     <button class = "button" id="twoButton" value = "2"> 2 </button>
     <button class = "button" id="threeButton" value = "3"> 3 </button>
@@ -40,75 +42,76 @@
 
     $("#oneButton").on("click", function() {
         let content = $("#oneButton").val();
-        $("#main").text(content);
+        $("#numSpot").append(content);
     });
     $("#twoButton").on("click", function() {
         let content = $("#twoButton").val();
-        $("#main").text(content);
+        $("#numSpot").append(content);
     });
     $("#threeButton").on("click", function() {
         let content = $("#threeButton").val();
-        $("#main").text(content);
+        $("#numSpot").append(content);
     });
     $("#fourButton").on("click", function() {
         let content = $("#fourButton").val();
-        $("#main").text(content);
+        $("#numSpot").append(content);
     });
     $("#fiveButton").on("click", function() {
         let content = $("#fiveButton").val();
-        $("#main").text(content);
+        $("#numSpot").append(content);
     });
     $("#sixButton").on("click", function() {
         let content = $("#sixButton").val();
-        $("#main").text(content);
+        $("#numSpot").append(content);
     });
     $("#sevenButton").on("click", function() {
         let content = $("#sevenButton").val();
-        $("#main").text(content);
+        $("#numSpot").append(content);
     });
     $("#eightButton").on("click", function() {
         let content = $("#eightButton").val();
-        $("#main").text(content);
+        $("#numSpot").append(content);
     });
     $("#nineButton").on("click", function() {
         let content = $("#nineButton").val();
-        $("#main").text(content);
+        $("#numSpot").append(content);
     });
     $("#zeroButton").on("click", function() {
         let content = $("#zeroButton").val();
-        $("#main").text(content);
+        $("#numSpot").append(content);
     });
     $("#dotButton").on("click", function() {
         let content = $("#dotButton").val();
-        $("#main").text(content);
+        $("#numSpot").append(content);
     });
     $("#clearButton").on("click", function() {
         let content = $("#clearButton").val();
-        $("#main").text(content);
+        $("#numSpot").text(" ");
+        $("#calcSymbol").text(" ");
     });
     $("#addButton").on("click", function() {
         let content = $("#addButton").val();
-        $("#main").text(content);
+        $("#calcSymbol").append(content);
     });
     $("#minusButton").on("click", function() {
         let content = $("#minusButton").val();
-        $("#main").text(content);
+        $("#calcSymbol").append(content);
     });
     $("#divideButton").on("click", function() {
         let content = $("#divideButton").val();
-        $("#main").text(content);
+        $("#calcSymbol").append(content);
     });
     $("#multiplyButton").on("click", function() {
         let content = $("#multiplyButton").val();
-        $("#main").text(content);
+        $("#calcSymbol").append(content);
     });
     $("#percentButton").on("click", function() {
         let content = $("#percentButton").val();
-        $("#main").text(content);
+        $("#calcSymbol").append(content);
     });
     $("#equalButton").on("click", function() {
         let content = $("#equalButton").val();
-        $("#main").text(content);
+        $("#main").append(content);
     });
 
 </script>
