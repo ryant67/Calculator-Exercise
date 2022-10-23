@@ -1,0 +1,94 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+.container {
+    width: 50vw;
+    height: 50vw;
+    margin: auto;
+    padding: 10%;
+}
+#displayRow {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+#rowOne {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+#rowTwo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+#rowThree {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+#rowFour {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+#rowFive {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.button {
+    width: 10vw;
+    height: 10vh;
+    font-size: 4em;
+    background-color: darkgray;
+    color: black;
+}
+.button:hover {
+    background-color: lightskyblue;
+    color: black;
+}
+.twoButton {
+    width: 20vw;
+    height: 10vh;
+    font-size: 4em;
+    background-color: lightskyblue;
+    color: black;
+}
+.twoButton:hover {
+    background-color: darkgray;
+    color: black;
+}
+.calcButton {
+    width: 10vw;
+    height: 10vh;
+    font-size: 4em;
+    background-color: lightskyblue;
+    color: black;
+}
+.calcButton:hover {
+    background-color: darkgray;
+    color: black;
+}
+#numSpot {
+    width: 15vw;
+    height: 10vh;
+    font-size: 4em;
+    display: flex;
+    align-items: center;
+}
+#calcSpot {
+    width: 10vw;
+    height: 10vh;
+    font-size: 4em;
+    display: flex;
+    align-items: center;
+}
+#numSpotTwo {
+    width: 15vw;
+    height: 10vh;
+    font-size: 4em;
+    display: flex;
+    align-items: center;
+}

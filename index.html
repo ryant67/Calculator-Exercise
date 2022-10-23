@@ -10,26 +10,39 @@
 <body>
 
 <div class="container">
-    <div id="numSpot"></div>
-    <div id="calcSymbol"></div>
-    <button class = "button" id="oneButton" value = "1"> 1 </button>
-    <button class = "button" id="twoButton" value = "2"> 2 </button>
-    <button class = "button" id="threeButton" value = "3"> 3 </button>
-    <button class = "button" id="fourButton" value = "4"> 4 </button>
-    <button class = "button" id="fiveButton" value = "5"> 5 </button>
-    <button class = "button" id="sixButton" value = "6"> 6 </button>
-    <button class = "button" id="sevenButton" value = "7"> 7 </button>
-    <button class = "button" id="eightButton" value = "8"> 8 </button>
-    <button class = "button" id="nineButton" value = "9"> 9 </button>
-    <button class = "button" id="zeroButton" value = "0"> 0 </button>
-    <button class = "button" id="dotButton" value = "."> . </button>
-    <button class = "button" id="clearButton" value = "C"> C </button>
-    <button class = "button" id="addButton" value = "+"> + </button>
-    <button class = "button" id="minusButton" value = "-"> - </button>
-    <button class = "button" id="divideButton" value = "/"> / </button>
-    <button class = "button" id="multiplyButton" value = "*"> * </button>
-    <button class = "button" id="percentButton" value = "%"> % </button>
-    <button class = "button" id="equalButton" value = "="> = </button>
+    <div id="displayRow">
+        <span id="numSpot" value=""></span>
+        <span id="calcSpot" value=""></span>
+        <span id="numSpotTwo" value=""></span>
+    </div>
+    <div id="rowOne">
+        <button class = "calcButton" id="addButton" value = "+"> + </button>
+        <button class = "calcButton" id="minusButton" value = "-"> - </button>
+        <button class = "twoButton" id="clearButton" value = "C"> C </button>
+    </div>
+    <div id="rowTwo">
+        <button class = "button" id="oneButton" value = "1"> 1 </button>
+        <button class = "button" id="twoButton" value = "2"> 2 </button>
+        <button class = "button" id="threeButton" value = "3"> 3 </button>
+        <button class = "calcButton" id="divideButton" value = "/"> / </button>
+    </div>
+    <div id="rowThree">
+        <button class = "button" id="fourButton" value = "4"> 4 </button>
+        <button class = "button" id="fiveButton" value = "5"> 5 </button>
+        <button class = "button" id="sixButton" value = "6"> 6 </button>
+        <button class = "calcButton" id="multiplyButton" value = "*"> * </button>
+    </div>
+    <div id="rowFour">
+        <button class = "button" id="sevenButton" value = "7"> 7 </button>
+        <button class = "button" id="eightButton" value = "8"> 8 </button>
+        <button class = "button" id="nineButton" value = "9"> 9 </button>
+        <button class = "calcButton" id="percentButton" value = "%"> % </button>
+    </div>
+    <div id="rowFive">
+        <button class = "button" id="zeroButton" value = "0"> 0 </button>
+        <button class = "button" id="dotButton" value = "."> . </button>
+        <button class = "twoButton" id="equalButton" value = "="> = </button>
+    </div>
 </div>
 
 
@@ -40,9 +53,12 @@
 
 <script>
 
+    console.log($("#numSpot").val());
+    console.log($("#calcSpot").val());
+
     $("#oneButton").on("click", function() {
         let content = $("#oneButton").val();
-        $("#numSpot").append(content);
+       $("#numSpot").append(content);
     });
     $("#twoButton").on("click", function() {
         let content = $("#twoButton").val();
@@ -81,38 +97,48 @@
         $("#numSpot").append(content);
     });
     $("#dotButton").on("click", function() {
+
         let content = $("#dotButton").val();
         $("#numSpot").append(content);
     });
     $("#clearButton").on("click", function() {
-        let content = $("#clearButton").val();
         $("#numSpot").text(" ");
-        $("#calcSymbol").text(" ");
+        $("#calcSpot").text(" ");
+        $("#numSpotTwo").text(" ");
     });
     $("#addButton").on("click", function() {
         let content = $("#addButton").val();
-        $("#calcSymbol").append(content);
+        $("#calcSpot").text(content);
     });
     $("#minusButton").on("click", function() {
         let content = $("#minusButton").val();
-        $("#calcSymbol").append(content);
+        $("#calcSpot").text(content);
     });
     $("#divideButton").on("click", function() {
         let content = $("#divideButton").val();
-        $("#calcSymbol").append(content);
+        $("#calcSpot").text(content);
     });
     $("#multiplyButton").on("click", function() {
         let content = $("#multiplyButton").val();
-        $("#calcSymbol").append(content);
+        $("#calcSpot").text(content);
     });
     $("#percentButton").on("click", function() {
         let content = $("#percentButton").val();
-        $("#calcSymbol").append(content);
+        $("#calcSpot").text(content);
     });
     $("#equalButton").on("click", function() {
         let content = $("#equalButton").val();
         $("#main").append(content);
     });
+
+    // if($("#calcSpot").val() === "") {
+    //     $("#numSpot").append(content);
+    // } else if($("#numSpot").val() !== "" && $("#calcSpot").val() !== "") {
+    //     $("#numSpotTwo").append(content);
+    // }
+
+    console.log($("#numSpot").val());
+    console.log($("#calcSpot").val());
 
 </script>
 
