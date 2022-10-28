@@ -21,21 +21,21 @@
         <button class = "twoButton" id="clearButton" value = "C"> C </button>
     </div>
     <div id="rowTwo">
-        <button class = "button" id="oneButton" value = "1"> 1 </button>
-        <button class = "button" id="twoButton" value = "2"> 2 </button>
-        <button class = "button" id="threeButton" value = "3"> 3 </button>
+        <button class = "button" id="sevenButton" value = "7"> 7 </button>
+        <button class = "button" id="eightButton" value = "8"> 8 </button>
+        <button class = "button" id="nineButton" value = "9"> 9 </button>
         <button class = "calcButton" id="divideButton" value = "/"> / </button>
     </div>
     <div id="rowThree">
         <button class = "button" id="fourButton" value = "4"> 4 </button>
         <button class = "button" id="fiveButton" value = "5"> 5 </button>
         <button class = "button" id="sixButton" value = "6"> 6 </button>
-        <button class = "calcButton" id="multiplyButton" value = "*"> * </button>
+        <button class = "calcButton" id="multiplyButton" value = "x"> x </button>
     </div>
     <div id="rowFour">
-        <button class = "button" id="sevenButton" value = "7"> 7 </button>
-        <button class = "button" id="eightButton" value = "8"> 8 </button>
-        <button class = "button" id="nineButton" value = "9"> 9 </button>
+        <button class = "button" id="oneButton" value = "1"> 1 </button>
+        <button class = "button" id="twoButton" value = "2"> 2 </button>
+        <button class = "button" id="threeButton" value = "3"> 3 </button>
         <button class = "calcButton" id="percentButton" value = "%"> % </button>
     </div>
     <div id="rowFive">
@@ -178,7 +178,35 @@
         $("#calcSpot").text(content);
     });
     $("#equalButton").on("click", function() {
-
+        let firstValue = parseInt($("#numSpot").text());
+        let secondValue = $("#calcSpot").text();
+        let thirdValue = parseInt($("#numSpotTwo").text());
+        if(secondValue === "+") {
+            $("#numSpot").text("");
+            $("#calcSpot").text("");
+            $("#numSpotTwo").text("");
+            $("#numSpotTwo").text(firstValue + thirdValue);
+        } else if(secondValue === "-") {
+            $("#numSpot").text("");
+            $("#calcSpot").text("");
+            $("#numSpotTwo").text("");
+            $("#numSpotTwo").text(firstValue - thirdValue);
+        } else if(secondValue === "/") {
+            $("#numSpot").text("");
+            $("#calcSpot").text("");
+            $("#numSpotTwo").text("");
+            $("#numSpotTwo").text(firstValue / thirdValue);
+        } else if(secondValue === "x") {
+            $("#numSpot").text("");
+            $("#calcSpot").text("");
+            $("#numSpotTwo").text("");
+            $("#numSpotTwo").text(firstValue * thirdValue);
+        } else if(secondValue === "%") {
+            $("#numSpot").text("");
+            $("#calcSpot").text("");
+            $("#numSpotTwo").text("");
+            Math.round($("#numSpotTwo").text((firstValue / thirdValue) * 100 + "%"));
+        }
     });
 
 </script>
