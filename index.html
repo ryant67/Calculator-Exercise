@@ -185,29 +185,44 @@
             $("#numSpot").text("");
             $("#calcSpot").text("");
             $("#numSpotTwo").text("");
-            $("#numSpotTwo").text(firstValue + thirdValue);
+            $("#numSpotTwo").text(add(firstValue, thirdValue));
         } else if(secondValue === "-") {
             $("#numSpot").text("");
             $("#calcSpot").text("");
             $("#numSpotTwo").text("");
-            $("#numSpotTwo").text(firstValue - thirdValue);
+            $("#numSpotTwo").text(subtract(firstValue, thirdValue));
         } else if(secondValue === "/") {
             $("#numSpot").text("");
             $("#calcSpot").text("");
             $("#numSpotTwo").text("");
-            $("#numSpotTwo").text(firstValue / thirdValue);
+            $("#numSpotTwo").text(divide(firstValue, thirdValue));
         } else if(secondValue === "x") {
             $("#numSpot").text("");
             $("#calcSpot").text("");
             $("#numSpotTwo").text("");
-            $("#numSpotTwo").text(firstValue * thirdValue);
+            $("#numSpotTwo").text(multiply(firstValue, thirdValue));
         } else if(secondValue === "%") {
             $("#numSpot").text("");
             $("#calcSpot").text("");
             $("#numSpotTwo").text("");
-            Math.round($("#numSpotTwo").text((firstValue / thirdValue) * 100 + "%"));
+            $("#numSpotTwo").text(percent(firstValue, thirdValue) + "%");
         }
     });
+    function add(x, y) {
+        return x + y;
+    }
+    function subtract(x, y) {
+        return x - y;
+    }
+    function multiply(x, y) {
+        return x * y;
+    }
+    function divide(x, y) {
+        return x / y;
+    }
+    function percent(x, y) {
+        return ((x / y) * 100);
+    }
 
 </script>
 
